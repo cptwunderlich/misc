@@ -9,8 +9,7 @@ I made a few, just for fun.
 
 ### pyquine.c
 
-This is like a "multiquine". But whereas the Wikipedia definition of a multiquine requires the user to specify the desired
-language as input, this quine simply is a valid Python3 and C program.
+This is a "[polyglot](https://en.wikipedia.org/wiki/Polyglot_%28computing%29) quine". It is a valid Python3 and C program at the same time.
 
 Tested with gcc 4.8.2 (on x86_64 Linux/Ubuntu) and Python 3.4.0.
 
