@@ -35,7 +35,6 @@ Tested with gcc 4.8.2 (on x86_64 Linux/Ubuntu)
 ```
 $ gcc -Wall -pedantic selfcomp.c
 $ ./a.out 55
-$ python3 pyquine.c > pyoutput
 $ ^C
 ```
 
