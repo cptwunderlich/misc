@@ -21,3 +21,21 @@ $ diff pyoutput coutput
 $ diff pyoutput pyquine.c
 $ diff coutput pyquine.c
 ```
+
+### selfcomp.c
+
+This C quine will write it's own source code into a new, randomly named, file in the current directory, call gcc on it and execute the binary.
+Kind of like a quine fork-bomb. It's not written to be portable or safe (now arg checking, error handling). The program takes one argument -
+a random number to seed the PRNG.
+
+**Warning:** Run it in an empty folder, that you can delete afterwards. It will generate *a lot* of files, very quickly.
+
+Tested with gcc 4.8.2 (on x86_64 Linux/Ubuntu)
+
+```
+$ gcc -Wall -pedantic selfcomp.c
+$ ./a.out 55
+$ python3 pyquine.c > pyoutput
+$ ^C
+```
+
