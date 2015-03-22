@@ -7,6 +7,18 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Quine_%28computing%29):
 
 I made a few, just for fun.
 
+### quine.c
+
+Your run-of-the-mill quine. Nothing too special here. I tried to keep the line lenght <= 100 characters.
+
+Tested with gcc 4.8.2 (on x86_64 Linux/Ubuntu)
+
+```
+$ gcc -Wall -pedantic quine.c
+$ ./a.out > output
+$ diff quine.c output
+```
+
 ### pyquine.c
 
 This is a "[polyglot](https://en.wikipedia.org/wiki/Polyglot_%28computing%29) quine". It is a valid Python3 and C program at the same time.
@@ -14,7 +26,7 @@ This is a "[polyglot](https://en.wikipedia.org/wiki/Polyglot_%28computing%29) qu
 Tested with gcc 4.8.2 (on x86_64 Linux/Ubuntu) and Python 3.4.0.
 
 ```
-$ gcc -Wall pyquine.c
+$ gcc -Wall -pedantic pyquine.c
 $ ./a.out > coutput
 $ python3 pyquine.c > pyoutput
 $ diff pyoutput coutput 
